@@ -1,0 +1,37 @@
+package All;
+
+import java.awt.BorderLayout;
+import java.awt.Color;
+import java.awt.Font;
+
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+
+public class TicTacToe {
+	JFrame frame = new JFrame();
+	JLabel textLabel = new JLabel();
+	JPanel textPanel = new JPanel();
+	
+	TicTacToe(){
+	frame.setTitle("Tic Tac Toe");
+	frame.setVisible(true);
+	frame.setSize(600,650);
+	frame.setLocationRelativeTo(null);
+	frame.setResizable(false);
+	frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+	frame.setLayout(new BorderLayout());
+	
+	textLabel.setBackground(Color.darkGray);
+	textLabel.setForeground(Color.white);
+	textLabel.setFont(new Font ("Arial", Font.BOLD, 50));
+	textLabel.setHorizontalAlignment(JLabel.CENTER);
+	textLabel.setText("Tic - Tac - Toe");
+	textLabel.setOpaque(true);    
+	
+	textPanel.setLayout(new BorderLayout());
+	textPanel.add(textLabel);
+	frame.add(textPanel, BorderLayout.NORTH);
+	
+	}
+}
